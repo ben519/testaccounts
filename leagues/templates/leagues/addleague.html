@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+Add League
+
+<form method="POST" action="/leagues/add/">
+	{% csrf_token %}
+	{{ form.as_p }}
+</form>
+
+</body>
+</html>

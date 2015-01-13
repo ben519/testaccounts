@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+Sign Up
+
+<form method="POST" action="/accounts/signup/">
+	{% csrf_token %}
+	<p><label>Email</label> <input type="text"></p>
+	<p><label>Password</label> <input type="text"></p>
+	<p><label>Confirm Password</label> <input type="text"></p>
+</form>
+
+</body>
+</html>

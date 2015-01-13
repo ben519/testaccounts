@@ -6,9 +6,6 @@ urlpatterns = patterns('',
     # Examples:
     # url(r'^$', 'testaccounts.views.home', name='home'),
     # url(r'^blog/', include('blog.urls')),
-
-    url(r'^admin/', include(admin.site.urls)),
-    url(r'^accounts/', include('accounts.urls')),
-    url(r'^leagues/', include('leagues.urls')),
-    url(r'^$', TemplateView.as_view(template_name="index.html")),
+    url(r'^signup/', TemplateView.as_view(template_name="accounts/signup.html")),
+    url(r'^signin/', TemplateView.as_view(template_name="accounts/signin.html")),
 )
