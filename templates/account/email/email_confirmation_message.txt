@@ -1,0 +1,10 @@
+{% load account %}{% user_display user as user_display %}{% load i18n %}{% autoescape off %}{% blocktrans with current_site.name as site_name %}Someone at {{ site_name }} has given this as an email address.
+
+To confirm this is correct, go to {{ activate_url }}
+{% endblocktrans %}{% endautoescape %}
+{% trans "Thanks for using our site!" %}
+
+{% trans "Sincerely" %},
+{{ current_site.name }}
+
+{% trans "Please tell your friends about http://prodaval.co" %}

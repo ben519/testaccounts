@@ -1,0 +1,2 @@
+{% load i18n %}
+{% blocktrans %}Successfully signed in as {{ user }}.{% endblocktrans %}
