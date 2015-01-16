@@ -11,3 +11,10 @@ class TemporaryManager(models.Manager):
             return self.filter(
                 pk__in=request.session[settings.TEMPORARY_SESSION_KEY])
         return self.none()
+
+
+class OrphansManager(TemporaryManager):
+
+    def get_queryset(self, *args, **kwargs):
+        return super(OrphansManager, self).get_queryset(
+            *args, **kwargs).filter(user__isnull=True)
