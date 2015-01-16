@@ -7,4 +7,3 @@ To confirm this is correct, go to {{ activate_url }}
 {% trans "Sincerely" %},
 {{ current_site.name }}
 
-{% trans "Please tell your friends about http://prodaval.co" %}

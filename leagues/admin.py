@@ -1,6 +1,11 @@
 from django.contrib import admin
+
+from temporary.admin import TemporaryAdmin
+
 from .models import League
 
-# Register your models here.
 
-admin.site.register(League)
+class LeagueAdmin(TemporaryAdmin):
+    pass
+
+admin.site.register(League, LeagueAdmin)

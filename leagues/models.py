@@ -1,10 +1,15 @@
+
 from django.db import models
 
-# Create your models here.
+from temporary.models import Temporary
 
 
-class League(models.Model):
-	league_name = models.CharField(max_length=60)
+class League(Temporary):
 
-	def __str__(self):
-		return self.league_name
+    league_name = models.CharField(max_length=60)
+
+    class Meta:
+        pass
+
+    def __unicode__(self):
+        return self.league_name
