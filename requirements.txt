@@ -3,9 +3,6 @@ django-allauth==0.19.0
 django-appconf==0.6
 django-extensions==1.4.9
 django-polymorphic==0.6.1
-GDAL==1.11.1
-mackup==0.7.4
-mercurial==3.2.3
 oauthlib==0.7.2
 python-openid==2.2.5
 requests==2.5.1
