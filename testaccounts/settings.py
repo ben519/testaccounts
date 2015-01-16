@@ -56,8 +56,11 @@ INSTALLED_APPS = (
     'allauth',
     'allauth.account',
     'allauth.socialaccount',
+    'polymorphic',
+    'appconf',
     
     'accounts',
+    'temporary',
     'leagues',
 )
 
@@ -69,6 +72,8 @@ MIDDLEWARE_CLASSES = (
     'django.contrib.auth.middleware.SessionAuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+
+    'temporary.middleware.TemporaryMiddleware',
 )
 
 ROOT_URLCONF = 'testaccounts.urls'
