@@ -1,12 +1,16 @@
 <!DOCTYPE html>
 <html>
-<body>
-
-<ul>
-	<li><a href="/leagues/add">add league</a></li>
-	<li><a href="/accounts/signup">sign up</a></li>
-	<li><a href="/accounts/signin">sign in</a></li>
-</ul>
-
-</body>
+  <body>
+    <ul>
+      {% if user.is_authenticated %}<h3>Hi, {{ user }}</h3>{% endif %}
+      
+      <li><a href="/leagues/add">add league</a></li>
+      {% if user.is_authenticated %}
+        <li><a href="{% url 'account_logout' %}">logout</a></li>
+      {% else %}
+        <li><a href="{% url 'account_signup' %}">sign up</a></li>
+        <li><a href="{% url 'account_login' %}">sign in</a></li>
+      {% endif %}
+    </ul>
+  </body>
 </html>
